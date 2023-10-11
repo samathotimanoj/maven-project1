@@ -4,7 +4,7 @@ pipeline {
         maven 'Maven'  
     }
 
-    stages {
+stages {
         stage('SCM') {
             steps {
                 echo 'Hello Clone stage'
@@ -20,8 +20,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Hello Deploy'
-deploy adapters: [tomcat9(credentialsId: '4f12d7ad-9864-4d8b-89a1-09e4dd744f9a', path: '', url: 'http://192.168.202.155:8081/')], contextPath: 'devops96.war', war: '**/*.war'
-            }
+deploy adapters: [tomcat9(credentialsId: '09bcf8be-fc5a-4c67-9a76-092fd2efb013', path: '', url: 'http://192.168.23.129:8081/')], contextPath: 'devops97.war', war: '**/*.war'          }
         }
     }
 }
