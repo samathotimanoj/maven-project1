@@ -20,7 +20,7 @@ git credentialsId: '09bcf8be-fc5a-4c67-9a76-092fd2efb013', url: 'https://github.
         stage('Deploy') {
             steps {
                 echo 'Hello Deploy'
-deploy adapters: [tomcat9(credentialsId: '09bcf8be-fc5a-4c67-9a76-092fd2efb013', path: '', url: 'http://192.168.23.129:8081/')], contextPath: 'devops97.war', war: '**/*.war'          }
+deploy adapters: [tomcat9(credentialsId: 'be99e30d-086f-4bfc-956e-79fc78f86b6b', path: '', url: 'http://192.168.23.129:8081/')], contextPath: 'devops97.war', war: '**/*.war'          }
         }
     }
 }
